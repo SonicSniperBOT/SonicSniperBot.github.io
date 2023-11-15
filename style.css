@@ -82,3 +82,16 @@ text {
   height: 60px;
   border-radius: 50%;
 }
+
+.image-link2 {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+}
+
+.image-icon2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
