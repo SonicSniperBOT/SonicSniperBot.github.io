@@ -6,12 +6,12 @@ const App = () => {
     const [inPlace, setInPlace] = React.useState(0);
     const [disabled, setDisabled] = React.useState(false);
     const images = [
-        { title: 'Sonic Sniper', url: 'img/LOGO6.png' },
-        { title: 'Sonic Sniper', url: 'img/LOGO5.png' },
-        { title: 'Sonic Sniper', url: 'img/LOGO1.png' },
-        { title: 'Sonic Sniper', url: 'img/LOGO2.png' },
-        { title: 'Sonic Sniper', url: 'img/LOGO3.png' },
-        { title: 'Sonic Sniper', url: 'img/LOGO4.png' },
+        { title: 'Sonic Sniper', url: '/img/LOGO6.png' },
+        { title: 'Sonic Sniper', url: '/img/LOGO5.png' },
+        { title: 'Sonic Sniper', url: '/img/LOGO1.png' },
+        { title: 'Sonic Sniper', url: '/img/LOGO2.png' },
+        { title: 'Sonic Sniper', url: '/img/LOGO3.png' },
+        { title: 'Sonic Sniper', url: '/img/LOGO4.png' },
     ];
     const onClick = (index) => { if (!disabled)
         setOpened(index); };
