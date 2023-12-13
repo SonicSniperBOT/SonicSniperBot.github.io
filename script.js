@@ -111,6 +111,11 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('https://walletweb-df2cfcc3d854.herokuapp.com/wallet-data')
     .then(response => response.json())
     .then(data => {
+
+      const solana = parseFloat(data.solanaBalance).toFixed(2);
+      const usdc = parseFloat(data.usdcBalance).toFixed(2);
+      const usdt = parseFloat(data.usdtBalance).toFixed(2);
+      const totalValue = parseFloat(data.totalDollarValue).toFixed(2);
       
       document.getElementById('solanaBalance').textContent = `Solana: ${data.solanaBalance}`;
       document.getElementById('usdcBalance').textContent = `USDC: ${data.usdcBalance}`;
