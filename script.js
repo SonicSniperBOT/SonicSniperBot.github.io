@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('solanaBalance').textContent = `Solana: ${data.solanaBalance}`;
       document.getElementById('usdcBalance').textContent = `USDC: ${data.usdcBalance}`;
       document.getElementById('usdtBalance').textContent = `USDT: ${data.usdtBalance}`;
-      document.getElementById('totalBalance').textContent = `Total Value: ${data.totalBalance} USD`;
+      document.getElementById('totalDollarValue').textContent = `Total Value: ${data.totalDollarValue} USD`;
     })
     .catch(error => {
       console.error('API error:', error);
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('solanaBalance').textContent = 'Solana: x';
       document.getElementById('usdcBalance').textContent = 'USDC: x';
       document.getElementById('usdtBalance').textContent = 'USDT: x';
-      document.getElementById('totalBalance').textContent = 'Total Value: x';
+      document.getElementById('totalDollarValue').textContent = 'Total Value: x';
     });
 });
 
