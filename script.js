@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('totalValue').textContent = `Total Value: ${data.totalValue} USD`;
     })
     .catch(error => {
-      console.error('API çağrısında bir hata oluştu:', error);
+      console.error('API error:', error);
      
       document.getElementById('solana').textContent = 'Solana: x';
       document.getElementById('usdc').textContent = 'USDC: x';
