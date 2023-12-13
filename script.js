@@ -112,18 +112,18 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
       
-      document.getElementById('solana').textContent = `Solana: ${data.solana}`;
-      document.getElementById('usdc').textContent = `USDC: ${data.usdc}`;
-      document.getElementById('usdt').textContent = `USDT: ${data.usdt}`;
-      document.getElementById('totalValue').textContent = `Total Value: ${data.totalValue} USD`;
+      document.getElementById('solanaBalance').textContent = `Solana: ${data.solanaBalance}`;
+      document.getElementById('usdcBalance').textContent = `USDC: ${data.usdcBalance}`;
+      document.getElementById('usdtBalance').textContent = `USDT: ${data.usdtBalance}`;
+      document.getElementById('totalBalance').textContent = `Total Value: ${data.totalBalance} USD`;
     })
     .catch(error => {
       console.error('API error:', error);
      
-      document.getElementById('solana').textContent = 'Solana: x';
-      document.getElementById('usdc').textContent = 'USDC: x';
-      document.getElementById('usdt').textContent = 'USDT: x';
-      document.getElementById('totalValue').textContent = 'Total Value: x';
+      document.getElementById('solanaBalance').textContent = 'Solana: x';
+      document.getElementById('usdcBalance').textContent = 'USDC: x';
+      document.getElementById('usdtBalance').textContent = 'USDT: x';
+      document.getElementById('totalBalance').textContent = 'Total Value: x';
     });
 });
 
