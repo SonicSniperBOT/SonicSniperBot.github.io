@@ -107,24 +107,28 @@ const Tabs = ({ images, onSelect }) => {
 };
 ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
+function formatNumber(num) {
+  return parseFloat(num).toFixed(2);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   fetch('https://walletweb-df2cfcc3d854.herokuapp.com/wallet-data')
     .then(response => response.json())
     .then(data => {
-
-      
-      document.getElementById('solanaBalance').textContent = `Solana: ${data.solanaBalance}`;
-      document.getElementById('usdcBalance').textContent = `USDC: ${data.usdcBalance}`;
-      document.getElementById('usdtBalance').textContent = `USDT: ${data.usdtBalance}`;
-      document.getElementById('totalDollarValue').textContent = `Total Value: ${data.totalDollarValue} USD`;
+      // API'den gelen verileri yuvarlayarak güncelleme
+      document.getElementById('solanaBalance').textContent = `Solana: ${formatNumber(data.solanaBalance)}`;
+      document.getElementById('usdcBalance').textContent = `USDC: ${formatNumber(data.usdcBalance)}`;
+      document.getElementById('usdtBalance').textContent = `USDT: ${formatNumber(data.usdtBalance)}`;
+      document.getElementById('totalDollarValue').textContent = `Total Value: ${formatNumber(data.totalDollarValue)} USD`;
     })
     .catch(error => {
-      console.error('API error:', error);
-     
-      document.getElementById('solanaBalance').textContent = 'Solana: x';
-      document.getElementById('usdcBalance').textContent = 'USDC: x';
-      document.getElementById('usdtBalance').textContent = 'USDT: x';
-      document.getElementById('totalDollarValue').textContent = 'Total Value: x';
+      console.error('API çağrısında bir hata oluştu:', error);
+      // Hata durumunda varsayılan metni ayarlayın
+      document.getElementById('solanaBalance').textContent = 'Solana: -';
+      document.getElementById('usdcBalance').textContent = 'USDC: -';
+      document.getElementById('usdtBalance').textContent = 'USDT: -';
+      document.getElementById('totalDollarValue').textContent = 'Total Value: -';
     });
 });
+
 
