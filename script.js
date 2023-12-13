@@ -111,8 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('https://walletweb-df2cfcc3d854.herokuapp.com/wallet-data')
     .then(response => response.json())
     .then(data => {
-      // Örnek olarak Solana, USDC, USDT ve Total Value değerlerini ayarlayın
-      // API'nizin yapısına göre bu alanları düzenleyin
+      
       document.getElementById('solana').textContent = `Solana: ${data.solana}`;
       document.getElementById('usdc').textContent = `USDC: ${data.usdc}`;
       document.getElementById('usdt').textContent = `USDT: ${data.usdt}`;
@@ -120,11 +119,11 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
       console.error('API çağrısında bir hata oluştu:', error);
-      // Hata durumunda varsayılan metni ayarlayın
-      document.getElementById('solana').textContent = 'Solana: Bilgi alınamadı';
-      document.getElementById('usdc').textContent = 'USDC: Bilgi alınamadı';
-      document.getElementById('usdt').textContent = 'USDT: Bilgi alınamadı';
-      document.getElementById('totalValue').textContent = 'Total Value: Bilgi alınamadı';
+     
+      document.getElementById('solana').textContent = 'Solana: x';
+      document.getElementById('usdc').textContent = 'USDC: x';
+      document.getElementById('usdt').textContent = 'USDT: x';
+      document.getElementById('totalValue').textContent = 'Total Value: x';
     });
 });
 
