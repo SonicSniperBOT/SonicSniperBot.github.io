@@ -112,10 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
 
-      const solana = parseFloat(data.solanaBalance).toFixed(2);
-      const usdc = parseFloat(data.usdcBalance).toFixed(2);
-      const usdt = parseFloat(data.usdtBalance).toFixed(2);
-      const totalValue = parseFloat(data.totalDollarValue).toFixed(2);
+      const solanaBalance = parseFloat(data.solanaBalance).toFixed(2);
+      const usdcBalance = parseFloat(data.usdcBalance).toFixed(2);
+      const usdtBalance = parseFloat(data.usdtBalance).toFixed(2);
+      const totalDollarValue = parseFloat(data.totalDollarValue).toFixed(2);
       
       document.getElementById('solanaBalance').textContent = `Solana: ${data.solanaBalance}`;
       document.getElementById('usdcBalance').textContent = `USDC: ${data.usdcBalance}`;
