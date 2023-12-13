@@ -112,10 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
 
-      const solanaBalance = parseFloat(data.solanaBalance).toFixed(2);
-      const usdcBalance = parseFloat(data.usdcBalance).toFixed(2);
-      const usdtBalance = parseFloat(data.usdtBalance).toFixed(2);
-      const totalDollarValue = parseFloat(data.totalDollarValue).toFixed(2);
+      const solana = isNaN(parseFloat(data.solana)) ? 'Bilgi alınamadı' : parseFloat(data.solana).toFixed(2);
+      const usdc = isNaN(parseFloat(data.usdc)) ? 'Bilgi alınamadı' : parseFloat(data.usdc).toFixed(2);
+      const usdt = isNaN(parseFloat(data.usdt)) ? 'Bilgi alınamadı' : parseFloat(data.usdt).toFixed(2);
+      const totalValue = isNaN(parseFloat(data.totalValue)) ? 'Bilgi alınamadı' : parseFloat(data.totalValue).toFixed(2);
       
       document.getElementById('solanaBalance').textContent = `Solana: ${data.solanaBalance}`;
       document.getElementById('usdcBalance').textContent = `USDC: ${data.usdcBalance}`;
