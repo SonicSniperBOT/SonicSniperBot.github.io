@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('https://walletweb-df2cfcc3d854.herokuapp.com/wallet-data')
     .then(response => response.json())
     .then(data => {
-      // API'den gelen verileri yuvarlayarak güncelleme
       document.getElementById('solanaBalance').textContent = `Solana: ${formatNumber(data.solanaBalance)}`;
       document.getElementById('usdcBalance').textContent = `USDC: ${formatNumber(data.usdcBalance)}`;
       document.getElementById('usdtBalance').textContent = `USDT: ${formatNumber(data.usdtBalance)}`;
@@ -123,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
       console.error('API çağrısında bir hata oluştu:', error);
-      // Hata durumunda varsayılan metni ayarlayın
       document.getElementById('solanaBalance').textContent = 'Solana: -';
       document.getElementById('usdcBalance').textContent = 'USDC: -';
       document.getElementById('usdtBalance').textContent = 'USDT: -';
